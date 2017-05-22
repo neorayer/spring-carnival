@@ -1,0 +1,64 @@
+group 'me.ucu.project.gradle.template'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext {
+        springBootVersion = "1.5.3.RELEASE"
+        junitVersion = "4.12"
+        lombokVersion = "1.16.16"
+    }
+    repositories {
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+}
+
+allprojects {
+    ext {
+    }
+
+    repositories {
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+    }
+
+    jar {
+        manifest {
+            attributes('Build-Time-ISO-8601': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"))
+        }
+    }
+
+    configurations.all {
+        exclude group: 'ch.qos.logback'
+    }
+
+    dependencies {
+        compile "org.springframework.boot:spring-boot-starter-log4j2:${springBootVersion}"
+        compileOnly "org.projectlombok:lombok:${lombokVersion}"
+
+        testCompile "junit:junit:${junitVersion}"
+    }
+}
+
+
+
+

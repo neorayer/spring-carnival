@@ -1,0 +1,4 @@
+rootProject.name = 'gradle-spring-template'
+
+include 'web-project', 'cli-project','subproject-1', 'subproject-2'
+
