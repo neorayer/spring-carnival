@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+spring:
+  name: demo-web-application
+
+springfox.documentation.swagger.v2.path: /api-docs/v2
+

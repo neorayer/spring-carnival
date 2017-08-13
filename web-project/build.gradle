@@ -1,7 +1,7 @@
-apply plugin: 'org.springframework.boot'
-
 dependencies {
+    compile "org.springframework.boot:spring-boot-starter-hateoas"
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+    compile "org.springframework.boot:spring-boot-starter-web"
 
-    compile "org.springframework.boot:spring-boot-starter-hateoas:${springBootVersion}"
-    compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    compile "io.springfox:springfox-swagger2:2.7.0"
 }

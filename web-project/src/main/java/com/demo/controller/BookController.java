@@ -2,6 +2,7 @@ package com.demo.controller;
 
 import com.demo.model.Book;
 import com.demo.service.BookService;
+import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Resource;
@@ -14,15 +15,16 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController
-@Slf4j
-public class BookController {
+@Log
+@RequestMapping("/api/books")
+public class BookController extends BaseController{
 
     @Autowired
     private BookService bookService;
 
     private final BookController MO = methodOn(BookController.class);
 
-    @GetMapping("/api/book/{bookId}")
+    @GetMapping("{bookId}")
     public Resource<Book> get(@PathVariable("bookId") String bookId){
         Book book = bookService.getBook(bookId);
         Resource resource = new Resource(book);
