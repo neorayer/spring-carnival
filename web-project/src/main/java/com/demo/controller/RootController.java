@@ -21,7 +21,7 @@ public class RootController extends BaseController<RootController>{
             resource.add(linkTo(ctl.list()).withRel("developer.list"));
             resource.add(linkTo(ctl.searchByName(null)).withRel("developer.searchByName"));
             resource.add(linkTo(ctl.get(null)).withRel("developer.get"));
-            resource.add(linkTo(ctl.create(null)).withRel("developer.create").);
+            resource.add(linkTo(ctl.create(null)).withRel("developer.create"));
         }
 
        return resource;
