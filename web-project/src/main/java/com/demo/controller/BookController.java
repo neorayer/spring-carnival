@@ -16,7 +16,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController
 @Log
-@RequestMapping("/api/books")
+@RequestMapping("/demo/books")
 public class BookController extends BaseController{
 
     @Autowired

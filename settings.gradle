@@ -1,4 +1,6 @@
-rootProject.name = 'gradle-spring-template'
+rootProject.name = 'spring-carnival'
 
-include 'web-project', 'cli-project','subproject-1', 'subproject-2'
+include 'spring-boot-admin'
+include 'web-project'
+include 'cli-project'
 

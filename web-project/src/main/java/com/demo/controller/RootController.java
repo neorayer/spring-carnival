@@ -13,7 +13,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 @RestController
 public class RootController extends BaseController<RootController>{
 
-    @GetMapping("/api")
+    @GetMapping("/demo")
     public ResourceSupport root() {
        ResourceSupport resource = new ResourceSupport();
         {

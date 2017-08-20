@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
 @RestController
-@RequestMapping("/api/developers")
+@RequestMapping("/demo/developers")
 public class DeveloperController extends BaseController<DeveloperController> {
 
     private List<Developer> allDevelopers = new ArrayList<>();

@@ -1,8 +1,17 @@
-server:
-  port: 8080
+---
+info:
+  stage: dev
 
 spring:
-  name: demo-web-application
+  application:
+    name: demo-web-app
 
-springfox.documentation.swagger.v2.path: /api-docs/v2
+spring.boot.admin:
+  url: http://localhost:8088
+  client:
+    metadata:
+      user.name: actuator
+      user.password: actuator
+
+
 
