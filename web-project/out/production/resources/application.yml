@@ -13,5 +13,5 @@ spring.boot.admin:
       user.name: actuator
       user.password: actuator
 
-
+management.security.enabled: false
 
